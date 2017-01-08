@@ -1,0 +1,14 @@
+{{ debug(entity) }}
+<h1>{{ entity.title }}</h1>
+<table border="1">
+	<thead>
+	<th>Field</th>
+	<th>Value</th>
+	</thead>
+{% for key, value in entity.getField() %}
+<tr>
+	<td>{{ key }}</td>
+	<td>{{ value }}</td>
+</tr>
+{% endfor %}
+</table>
